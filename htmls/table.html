@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Web  - Reddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+ <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        caption{
+        	padding:10px;
+            font-size:20px;
+            font-weight:bold;
+            
+        }
+        .last{
+        background:green;
+        }
+    </style>
+</head>
+
+<body>
+   <table>
+        <caption>House Hold Products</caption>
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Milk</td>
+            <td>2</td>
+            <td>50.00</td>
+        </tr>
+        <tr>
+            <td>Eggs</td>
+            <td>8</td>
+            <td>48.00</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <th colspan="2">Subtotal</th>
+                <td> 110.00</td>
+            </tr>
+            <tr>
+                <th colspan="2">Tax</th>
+                <td>10%</td>
+            </tr>
+            <tr class="last">
+                <th colspan="2">Grand Total</th>
+                <td>121.00</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

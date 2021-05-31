@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Web - Reddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+  <meta http-equiv="refresh" content="30">
+</head>
+<body>
+<div>
+  <h2>HTML Forms</h2>
+</div>
+<br>
+
+<form>
+
+  
+  <!-- <label for="fname">First name:</label> -->
+  <input type="text" id="fname" placeholder="FirstName" value="Reddy" readonly  name="fname"><br><br>
+
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password"><br><br>
+
+  <h5>Select Gender</h5>
+
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label>
+
+  <h5>Select Faviourite Movies</h5>
+
+  <label for="mv1">Maharshi</label>  
+  <input type="checkbox" id="mv1" name="mv1" value="Maharshi">   <br>
+
+  <label for="mv2">Vakeelsaab</label>  
+  <input type="checkbox" id="mv2" name="mv2" value="Vakeelsaab"> <br>
+
+  <label for="mv3">Jathiratnalu</label>   
+  <input type="checkbox" id="mv3" name="mv3" value="Jathiratnalu">
+    
+
+  <h5>Tell me about your self</h5>
+  <textarea name="" id="" cols="30" rows="10" maxlength="300"></textarea>
+
+  <input type="color"> <br> <br> <br>
+
+  <input type="date" ><br> <br> <br>
+
+  <input type="email" placeholder="Enter your emai"> <br> <br> <br>
+
+  <input type="file"> <br> <br> <br>
+
+  <input type="url"> <br> <br> <br>
+
+  <input type="number" min="1" max="10">  <br> <br> <br>
+
+  <input type="search"> <br> <br> <br>
+
+  <img src="../assets/images/favicon.png" alt="Reddy">
+
+  
+  <h5>Choose Faviourite Hero</h5>
+
+  <label for="heros"></label>
+  <select name="heros" id=""  multiple>
+
+    <option value="Mahesh babu">Mahesh babu</option>
+    <option value="Pawan kalyan">Pawan kalyan</option>
+    <option value="Chiranjeevi">Chiranjeevi</option>
+
+  </select>
+
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<br> <br> <br><br> <br> <br>
+
+<form action="#">
+
+<fieldset>
+
+  <legend>Faviourite cricketer</legend>
+
+  <input type="checkbox" name="cr1" value="Sachin">
+  <label for="crl">Sachin</label>
+
+  <input  style="min-height: 2%;color: blue;" type="checkbox" name="cr2" value="Dhoni">
+  <label for="cr2">Dhoni</label>
+
+  <br>
+
+
+  
+  <label >Select Option groups</label>
+  <select name="" id="">
+    <!-- optgroup is used to group options -->
+    <optgroup label="Mobiles">
+      <option value="samsung">Samsung</option>
+      <option value="apple">Apple</option>
+    </optgroup>
+    <optgroup label="ACs">
+      <option value="samsung">Samsung</option>
+      <option value="Voltas">Voltas</option>
+    </optgroup>
+    <optgroup label="Laptops">
+      <option value="Samsung">Samsung</option>
+      <option value="Dell">Dell</option>
+      <option value="Lenovo">Lenvo</option>
+    </optgroup>
+  </select>
+
+  <br>  <br>  <br>  <br>  <br>  <br>
+
+<h3>Datalist mobiles</h3>
+  <input list="mobiles">
+
+  <datalist id="mobiles">
+
+    <option value="Samsung"></option>
+    <option value="Apple"></option>
+    <option value="Oppo"></option>
+    <option value="Vivo"></option>
+  </datalist>
+
+
+
+</fieldset>  
+</form>
+</body>
+
+</html>

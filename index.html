@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web - Reddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Reddy Uppathi">
+    <meta name="description" content="html. css, javascript , angular , node, lazy loading">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(steelblue, #9cb0b3);
+            /* max-width: 165ch;
+            min-width: 800px;
+            min-height: 530px; */
+            width: 100%;
+            height: 50%;
+            margin: 20px auto;
+            padding: 15px;
+            padding-bottom: 0;
+            display: grid;
+            grid-template: "header  header  header""divider divider divider""nav  main  sidebar""footer  footer  footer"/200px 1fr 200px;
+            grid-gap: 10px 30px;
+        }
+
+        body::before {
+            content: "";
+            display: block;
+            grid-area: divider;
+            border-bottom: 1px dashed #fff;
+        }
+
+        body>header {
+            grid-area: header;
+        }
+
+        .header {
+            display: grid;
+            grid-template: "logo ........... ......"1fr "logo primary-nav search"auto "logo ........... ......"1fr/200px 1fr 200px;
+            grid-gap: 0 40px;
+        }
+
+        .primary-nav {
+            grid-area: primary-nav;
+            display: flex;
+        }
+
+        .primary-nav ul {
+            flex-grow: 1;
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin-left: -20px;
+        }
+
+        .primary-nav li {
+            margin-left: 20px;
+            flex-grow: 1;
+            display: flex;
+            text-align: center;
+        }
+
+        .primary-nav a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: #fff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            grid-area: logo;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            font-size: 2em;
+            margin: 0;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background: radial-gradient(black, transparent);
+        }
+
+        .search {
+            grid-area: search;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .search input {
+            width: 100%;
+        }
+
+        .secondary-nav {
+            grid-area: nav;
+            background-color: #30526e;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .secondary-nav ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+        }
+
+        .secondary-nav li {
+            display: flex;
+            width: 100%;
+        }
+
+        .secondary-nav a {
+            background: #fff;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 28px 0;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        main p:last-child {
+            margin-bottom: 0;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background: #30526e;
+            padding: 20px;
+        }
+
+        aside section {
+            margin-bottom: 2.5em;
+        }
+
+        aside h2 {
+            margin: 0;
+            margin-bottom: 0.5em;
+            font-size: 1.2em;
+        }
+
+        .share ul {
+            background: #fff;
+            padding-top: 5px;
+            padding-bottom: 15px;
+        }
+
+        .share li {
+            margin-top: 0.5em;
+        }
+
+        .recommended ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .recommended li {
+            background: #fff;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .recommended h3 {
+            margin: 0;
+            margin-bottom: 0.5em;
+        }
+
+        .recommended p {
+            margin: 0;
+        }
+
+        footer {
+            grid-area: footer;
+            padding: 20px;
+            border-top: 1px dashed #fff;
+            margin-top: 16px;
+        }
+
+        footer ul {
+            display: block;
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        footer li {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.5s;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        footer a:hover {
+            font-size: 20px;
+        }
+
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        a {
+            color: #000;
+        }
+
+        .white-color {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <header class="header">
+            <a class="logo" href="#" title="Go to home page">Reddy</a>
+            <nav class="primary-nav" aria-label="Primary">
+                <ul>
+                </ul>
+            </nav>
+            <form class="search" role="search" aria-label="site">
+                <label><span class="white-color">Search</span>
+                    <input type="search" />
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </header>
+        <nav class="secondary-nav" aria-label="Secondary">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="https://popvictoria73.github.io/">About</a></li>
+                <li><a href="mailto:papireddy345@gmail.com">Contact</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <h2>Reddy Uppathi</h2>
+                <p>I am an experienced agile friendly full stack web developer.Have expertise knowledge to thrive future
+                    rich products with in built digital flow</p>
+                <h3>Knowledge</h3>
+                <p>Extensive JS ecosystems, with libraries like Angular, React & Nodejs. Corporate strategy working
+                    model to enable value addition to the proposition.</p>
+            </article>
+        </main>
+        <aside aria-label="Sidebar">
+            <section class="share">
+                <h2 class="white-color">Share</h2>
+                <ul>
+                    <li><a target="_blank" href="https://in.linkedin.com/in/reddy-uppathi">Linkedin</a></li>
+                    <li><a target="_blank" href="https://twitter.com/ReddyUppathi">Twitter</a></li>
+                    <li><a target="_blank" href="mailto:papireddy345@gmail.com">Email</a></li>
+                </ul>
+            </section>
+            <section class="recommended">
+                <h2 class="white-color">Knowledge Base</h2>
+                <ul>
+                    <li>
+                        <article>
+                            <h3><a target="_blank" href="https://reddyuppathi.wordpress.com/">Article</a></h3>
+                            <p> OverAPI is a website</p>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+        <footer>
+            <ul>
+                <li><a href="https://popvictoria73.github.io/" target="_blank">Reddy Uppathi</a></li>
+            </ul>
+        </footer>
+    </body>
+
+</body>
+
+</html>

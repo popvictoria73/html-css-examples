@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web - Reddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <style>
+        /* ############ CSS Selectors ############### */
+        /* Use ID */
+        /* #myP {
+            color: blue;
+        } */
+
+        /* use Class */
+        /* .my-class {
+            color: green;
+        } */
+
+        /* Use tag */
+        /* p {
+            color: red;
+        } */
+
+        /* apply style for div which has id "myDiv" */
+        div#myDiv {
+            /* background-color: green; */
+        }
+
+        div#myDiv span.iam-span {
+            /* background-color: green; */
+        }
+
+        h2:hover{
+            /* background-color: hotpink; */
+        }
+
+        /* root elements and universal  */
+        /* * {
+            color: yellow;
+        } */
+
+        /* div  {
+            background-color: red;
+        } */
+
+        .movies::before {
+            content: "<<";
+        }
+
+        .movies::after {
+            content: ">>";
+        }
+
+
+        .my-dev-img {
+            background-image: url('../assets/images/dev.png');
+            background-repeat: no-repeat;
+            background-position: top right;
+        }
+        
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <div  class="my-dev-img"  alt="Developer">
+
+    
+    <!-- coding standard for ID  -----   [camel case] -->
+    <div id="myDiv">
+
+        I am a parent div
+
+        <h2>CSS Basics</h2>
+        <!-- id , class and tag css styles , understand the precendence , order , priority-->
+        <!-- <p id="myP" class="my-class"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum aperiam nobis magni ullam unde illum id nesciunt dolores facere in rem soluta, ipsum vero laudantium qui accusantium expedita eligendi perspiciatis?</p> -->
+
+        <!-- coding standard for class name  -----   [small case with hyphen symbol as seperator] -->
+        <span class="iam-span"> iam span tag inside myDiv</span> <br>
+        <br><br><br>
+        <span class="iam-new-sapn">iam-new-sapn</span>
+
+        <div>
+            i am internal div
+        </div>
+
+
+
+    </div>
+
+
+    <div> I am other DIV </div>
+
+
+    <br>
+
+    <form>
+
+
+        <h5 class="movies">select Faviourite Movies</h5>
+
+        <label for="mv1">Maharshi</label>
+        <input type="checkbox" id="mv1" name="mv1" value="Maharshi"> <br>
+
+        <label for="mv2">Vakeelsaab</label>
+        <input type="checkbox" id="mv2" name="mv2" value="Vakeelsaab"> <br>
+
+        <label for="mv3">Jathiratnalu</label>
+        <input type="checkbox" id="mv3" name="mv3" value="Jathiratnalu">
+
+</body>
+
+</html>
