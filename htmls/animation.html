@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web - Reddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        .animate-css {
+            width: 100px;
+            background-color: green;
+            height: 60px;
+            margin: 30px;
+            animation: myanimate 5s;
+            animation-iteration-count: infinite;
+            position: relative;
+            border: 50%;
+        }
+
+        @keyframes myanimate {
+
+            0% {
+                left: 0px;top: 0px;background-color: red;
+            }
+            25% {
+                left: 200px;top: 0px;background-color: blue;
+            }
+
+            50% {
+                left: 200px;top: 200px;background-color: yellow;
+            }
+
+            75% {
+                left: 0px;top: 200px;background-color: gold;
+            }
+
+            100% {
+                left: 0px;top: 0px;background-color: pink;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="animate-css">One</div>
+    <!-- <div class="animate-css">Two</div>
+    <div class="animate-css">Three</div>
+    <div class="animate-css">Four</div> -->
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web - Reddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <style>
+        div+p {
+            color: blue;
+        }
+
+        div~span {
+            color: coral;
+        }
+
+        /* 
+        .module:nth-child(4n) {
+            margin-right: 0;
+            color: cyan
+        } */
+
+
+
+
+
+        p>span {
+            color: green;
+        }
+
+/* 
+        div + p {
+            background-color: gold;
+        } */
+
+        /* apply to all the sibilings  which are p tags*/
+        div ~ p {
+            background-color: red;
+        }
+
+        p:last-child{
+            color: white;
+            background-color: red;
+            font-size: 20px;
+        }
+
+
+        
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="my-dev-img bg" alt="Developer">
+
+        <p id="myDiv"> I am a parent div </p>
+
+        <h2>CSS Basics</h2>
+        <span class="iam-span"> iam span tag inside myDiv</span> <br>
+        <br><br><br>
+        <span class="iam-new-sapn">iam-new-sapn</span>
+
+        <div>
+            i am internal div
+        </div>
+
+    </div>
+    <p>I am p1</p>
+
+    <div>
+        I am other DIV
+    </div>
+
+    <span>
+        I am other span 1
+    </span>
+
+    <span>
+        I am other span 2
+    </span>
+
+
+    <!-- in this section p tag is parent for all the span elements -->
+
+    <div>
+        I am new Div
+    </div>
+    <p class="bg-red"> I am first P </p>
+
+    <div>
+        I am new Div
+    </div>
+    <p class="bg-red"> I am first P </p>
+
+
+    <div>
+        I am new Div
+    </div>
+    <p class="bg-red"> I am first P </p>
+
+
+    <div>
+        I am new Div
+    </div>
+    <p class="bg-red"> I am first P </p>
+    <span class="bg-red"> I am last span </span>
+
+
+
+
+    <div>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+    </div>
+
+
+</body>
+
+</html>

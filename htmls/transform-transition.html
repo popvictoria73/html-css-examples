@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web - Reddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        .container {
+            margin: 50px;
+        }
+
+        .container:hover {
+            transform: translateX(200px);
+        }
+
+
+        /* .square {
+            border-radius: 10%;
+            height: 30px;
+            width: 30px;
+            margin: 10px;
+        } */
+
+        .square0 {
+            border-radius: 10%;
+            height: 30px;
+            width: 30px;
+            margin: 10px;
+            background: PaleTurquoise;
+            transition: all 1.5s linear;
+        }
+
+        .square1 {
+            background: red;
+            transition: all 1.5s ease;
+        }
+
+        .square2 {
+            background: lightskyblue;
+            transition: all 1.5s ease-in;
+        }
+
+        .square3 {
+            background: khaki;
+            transition: all 1.5s ease-out;
+        }
+
+        .square4 {
+            background: mediumturquoise;
+            transition: all 1.5s ease-in-out;
+        }
+
+        .square5 {
+            background: thistle;
+            transition: all 1.5s cubic-bezier(0, 1, .98, 0);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="square square0"></div>
+        <div class="square square1"></div>
+        <div class="square square2"></div>
+        <div class="square square3"></div>
+        <div class="square square4"></div>
+        <div class="square square5"></div>
+    </div>
+</body>
+
+</html>

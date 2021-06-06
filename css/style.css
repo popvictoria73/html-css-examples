@@ -1,3 +1,6 @@
-/* h5 {
-    color: blue;
-} */
+@import "color.css"; /* Using a string */
+/* @import url("color.css"); */
+
+.main-container {
+    background-color: green;
+}
