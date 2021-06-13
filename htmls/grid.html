@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web - Reddy - CSS Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.3fr 1fr 1.6fr 0.7fr ;
+            height: 90vh;
+            grid-template-areas: 
+            "nav nav nav nav"
+            "sidebar main main main"
+            "sidebar c1 c2 c3"
+            "sidebar footer footer footer";
+            font-weight: 700;
+            font-size: 17px;
+            grid-gap: 0.3rem;
+            text-transform: uppercase;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+
+        nav {
+            background-color: red;
+            grid-area: nav;
+        }
+
+        .sidebar {
+            background-color: lightpink;
+            grid-area: sidebar;
+        }
+
+        main {
+            background-color: blue;
+            grid-area: main;
+        }
+
+        footer {
+            background-color: yellow;
+            grid-area: footer;
+        }
+
+        .content-box-1 {
+            background-color: gold;
+            grid-area: c1;
+        }
+
+        .content-box-2 {
+            background-color: lightblue;
+            grid-area: c2;
+        }
+
+        .content-box-3 {
+            background-color: lightgreen;
+            grid-area: c3;
+        }
+
+        @media (max-width:700px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 0.2fr 0.8fr 1.2fr 1fr 1fr 1fr 0.6fr;
+                grid-template-areas: 
+                "nav"
+                "sidebar"
+                "main"
+                "c1"
+                "c2"
+                "c3"
+                "footer"
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>Navigation bar</nav>
+        <main>Main Section</main>
+        <div class="sidebar">SideBar</div>
+        <div class="content-box-1">content-box-1</div>
+        <div class="content-box-2">content-box-2</div>
+        <div class="content-box-3">content-box-3</div>
+        <footer>Footer area</footer>
+    </div>
+
+</body>
+
+</html>
