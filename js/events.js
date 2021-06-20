@@ -5,7 +5,7 @@ function changeColor() {
 }
 
 function init() {
-   alert("your resinging")
+   //alert("your resinging")
 }
 
 function validateData() {

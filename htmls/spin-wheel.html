@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web Technology - Spin Wheel </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- view port metatag for responsiveness -->
+    <meta name="author" content="Reddy Uppathi">
+    <meta name="description" content="I am web developer having skill in html . css, javascript , angular">
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../css/spin-wheel.css">
+</head>
+
+<body>
+    <h3 class="heading">
+        <i>Which mobile should I buy? 🧐🤔🧐. Refresh to play again</i>
+    </h3>
+        <div id="mainbox" class="mainbox">
+            <div id="box" class="box">
+                <div class="box1">
+                    <span class="span1"><b>Samsung</b></span>
+                    <span class="span2"><b>Apple</b></span>
+                    <span class="span3"><b>Vivo</b></span>
+                    <span class="span4"><b>Oppo</b></span>
+                </div>
+                <div class="box2">
+                    <span class="span1"><b>One Plus</b></span>
+                    <span class="span2"><b>Nokia</b></span>
+                    <span class="span3"><b>Redmi</b></span>
+                    <span class="span4"><b>Real Me</b></span>
+                </div>
+            </div>
+
+            <button id="spinWhl" class="spin" onclick="spinWheel()">SPIN</button>
+        </div>
+
+        <div id="congratesDiv" class="bubble congrates">
+            Congratulations 🎉
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+
+
+        <script>
+            document.getElementById("congratesDiv").style.display = "none";
+            function spinWheel() {
+                document.getElementById("spinWhl").style.pointerEvents = "none";
+                var obj = document.createElement('audio');
+                obj.src = '../assets/media/tick.mp3';
+                obj.play();
+                var audio = setInterval(function () { obj.play(); }, 10);
+
+                var x = 1024; //minimum value
+                var y = 9999; // maximum value
+
+                var deg = Math.floor(Math.random() * (x - y)) + y;
+
+                document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
+
+                var element = document.getElementById('mainbox');
+                element.classList.remove('animate');
+                setTimeout(function () {
+                    element.classList.add('animate');
+                    clearInterval(audio)
+                    obj.pause();
+                    openCongratesDiv();
+                }, 5000); //5000 = 5 second
+            }
+
+            function openCongratesDiv() {
+                setTimeout(function () {
+                    document.getElementById("congratesDiv").style.display = "block";
+                    document.getElementById("mainbox").style.display = "none";
+                    document.getElementById("spinWhl").style.pointerEvents = "auto";
+                }, 2000)
+            }
+        </script>
+</body>
+
+</html>

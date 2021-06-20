@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web Technology Coaching - Reddy Uppathi - DRAG DROP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- view port metatag for responsiveness -->
+    <meta name="author" content="Reddy Uppathi">
+    <meta name="description" content="I am web developer having skill in html . css, javascript , angular">
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <meta http-equiv="refresh" content="10">
+    <style>
+         #boxA,#boxB {
+            float: left;
+            padding: 10px;
+            margin: 10px;
+            user-select: none;
+        }
+
+        #boxA {
+            background-color: #33ff99;
+            width: 75px;
+            height: 75px;
+        }
+
+        #boxB {
+            background-color: #fa66ff;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <script src="../js/drag-drop.js"></script>
+</head>
+
+<body>
+
+    <h2>Drag and Drop</h2>
+
+    <div id="boxA" draggable="true" ondragstart="return dragStart(event)">
+        Drag Me
+    </div>
+    <div id="boxB" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)"
+        ondragover="return dragOver(event)">
+        I will take draggable items
+    </div>
+</body>
+
+</html>
