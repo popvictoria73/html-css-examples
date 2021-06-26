@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch - Reddy Web dev</title>
+    <style>
+      body {
+        background: #b8e0d3;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        text-align: center;
+        top:20%;
+        position: absolute;
+        left:40%
+      }
+
+      #time {
+        font-size: 50px;
+      }
+
+      .btns-container {
+        margin: 10px 0;
+      }
+
+      button {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 2px;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        filter: grayscale(0.5);
+      }
+      button:focus {
+        outline: none;
+      }
+
+      #start_btn {
+        background: green;
+      }
+      #pause_btn {
+        background: blue;
+        display: none;
+      }
+      #reset_btn {
+        background: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Stopwatch - Timer</h1>
+
+      <div id="time">00:00:00</div>
+
+      <div class="btns-container">
+        <button id="start_btn" onclick="start()">START</button>
+        <button id="pause_btn" onclick="pause()">PAUSE</button>
+        <button id="reset_btn" onclick="reset()">RESET</button>
+      </div>
+    </div>
+
+    <script src="../js/stopwatch.js"></script>
+  </body>
+</html>

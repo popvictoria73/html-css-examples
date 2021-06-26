@@ -10,7 +10,6 @@
     <meta name="description" content="I am web developer having skill in html . css, javascript , angular">
 
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
-    <meta http-equiv="refresh" content="10">
     <style>
          #boxA,#boxB {
             float: left;
@@ -38,9 +37,13 @@
 
     <h2>Drag and Drop</h2>
 
-    <div id="boxA" draggable="true" ondragstart="return dragStart(event)">
+    <!-- Drag  -->
+    <div id="boxA" draggable="true" ondragstart="return dragStart(event)"  >
         Drag Me
     </div>
+
+
+    <!-- Drop the dragged element inside me -->
     <div id="boxB" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)"
         ondragover="return dragOver(event)">
         I will take draggable items

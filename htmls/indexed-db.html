@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Technology Coaching - Reddy Uppathi - Indexed DB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- view port metatag for responsiveness -->
+    <meta name="author" content="Reddy Uppathi" />
+    <meta
+      name="description"
+      content="I am web developer having skill in html . css, javascript , angular"
+    />
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+  </head>
+
+  <body>
+    <script>
+      //Data which we want to store inside the database.
+      var studentData = [
+        {
+          Name: "Reddy",
+          Email: "reddy@testmail.com",
+          Location: "Hyderabad",
+        },
+        {
+          Name: "Uppathi",
+          Email: "webtech@gmail.com",
+          Location: "Ongole",
+        },
+      ];
+
+      function callIndexeddDB() {
+        var Database_Name = "studentDB";
+        var DB_Version = "1";
+        var dbObj;
+        if (!window.indexedDB) {
+          window.alert("Your browser doesn't support IndexedDB. ");
+          return;
+        }
+        var request = indexedDB.open(Database_Name, DB_Version);
+        request.onsuccess = function (e) {
+          document.getElementById("status").innerHTML =
+            "Database ready to use :)";
+          dbObj = request.result;
+          var transaction = dbObj.transaction("myStudentObject");
+          var objectStore = transaction.objectStore("myStudentObject");
+          var req = objectStore.get(1);
+          req.onsuccess = function (e) {
+            document.getElementById("status").innerHTML =
+              "Name for id 1 " +
+              req.result.Name +
+              "<br/>Email: " +
+              req.result.Email +
+              "</br>Location: " +
+              req.result.Location;
+          };
+        };
+        request.onerror = function (e) {
+          console.log("Error:" + e.target.errorCode);
+          document.getElementById("result").innerHTML =
+            "Error! The Database connection not opened.";
+        };
+        //the onupgradeneeded event is fire when a database is opened with a new version number
+        request.onupgradeneeded = function (e) {
+          //creating Object Store
+          var objectStore = e.currentTarget.result.createObjectStore(
+            "myStudentObject",
+            { keyPath: "id", autoIncrement: true }
+          );
+
+          //creating Indexes
+          objectStore.createIndex("Name", "Name", { unique: false });
+          objectStore.createIndex("Email", "Email", { unique: true });
+          objectStore.createIndex("Location", "Location", { unique: false });
+
+          //To store the Data
+          for (i in studentData) {
+            objectStore.add(studentData[i]);
+          }
+        };
+      }
+    </script>
+    <h2>Indexed DB Example</h2>
+    <button id="btnCreateStore" onclick="callIndexeddDB()">Get Data from DB</button>
+    <p id="status"></p>
+  </body>
+</html>

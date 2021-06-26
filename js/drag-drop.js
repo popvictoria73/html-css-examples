@@ -5,7 +5,7 @@ function dragStart(ev) {
     return true;
 }
 function dragEnter(ev) {
-    event.preventDefault();
+    ev.preventDefault(); // to prevent an element default behaviuor 
     return true;
 }
 function dragOver(ev) {

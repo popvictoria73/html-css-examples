@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Technology Coaching - Reddy Uppathi - Web Worker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- view port metatag for responsiveness -->
+    <meta name="author" content="Reddy Uppathi" />
+    <meta
+      name="description"
+      content="I am web developer having skill in html . css, javascript , angular"
+    />
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png" />
+    <style></style>
+  </head>
+
+  <body>
+    <!-- Web worker is a intensive task runner used for background tasks -->
+
+    <h2>Web Worker</h2>
+
+    <div id="wrkID"></div>
+
+    <script>
+      var wrkr;
+      if (window.Worker) {
+        var wrkr = new Worker("../js/work.js");
+        wrkr.onmessage = function name(eve) {
+          document.getElementById("wrkID").innerHTML = eve.data;
+        };
+        wrkr.onerror = function (event) {
+          console.log(event.message, event);
+        };
+      } else {
+        alert("worker is not supported");
+      }
+
+      function terminateWorker() {
+        wrkr.terminate();
+        wrkr = undefined;
+      }
+    </script>
+  </body>
+</html>
